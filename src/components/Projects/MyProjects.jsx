@@ -39,8 +39,8 @@ const projectsData = [
     id: 5,
     title: "3D Developer Portfolio",
     description: "A cinematic personal portfolio built with React, Three.js, and GSAP, featuring advanced scroll animations and volumetric effects.",
-    githubLink: "#",
-    deployLink: "#",
+    githubLink: "https://github.com/ManthanSiroya/Porfolio",
+    deployLink: "https://manthan-porfolio.vercel.app/",
     skills: ["React", "Three.js(WebGL)", "GSAP", "Next.js", "Tailwind CSS", "Complex-Physics"]
   },
   {
