@@ -71,9 +71,28 @@ function __OriginkitBase_CurvedLoop({
     const spacing = textWidth + gapPx;
 
     useEffect(() => {
-        if (measureRef.current) {
-            setTextWidth(measureRef.current.getComputedTextLength());
+        const measure = () => {
+            if (measureRef.current) {
+                setTextWidth(measureRef.current.getComputedTextLength());
+            }
+        };
+        
+        // Initial measurement
+        measure();
+        
+        // Re-measure after custom fonts have fully loaded to prevent overlapping bugs
+        if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(measure);
         }
+        
+        // Safe fallback just in case the layout takes an extra frame
+        const timeoutId = setTimeout(measure, 100);
+        const timeoutId2 = setTimeout(measure, 500);
+        
+        return () => {
+            clearTimeout(timeoutId);
+            clearTimeout(timeoutId2);
+        };
     }, [text, font, color, direction, baseVelocity, curveAmount, gap, draggable, dragIntensity, fade, fadePercent]);
     useEffect(() => {
         if (pathRef.current) {

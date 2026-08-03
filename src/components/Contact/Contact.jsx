@@ -20,7 +20,7 @@ export const defaultItems = [
     { letter: "O", icon: <FaGithub />, label: "Github", href: "https://github.com/ManthanSiroya" },
     { letter: "N", icon: <FaLinkedin />, label: "LinkedIn", href: "https://www.linkedin.com/in/manthan-siroya-7b084337b/" },
     { letter: "T", icon: <FaTwitter />, label: "Twitter", href: "https://x.com/Manthan_Siroya" },
-    { letter: "A", icon: <FaEnvelope />, label: "Email", href: "manthansiroya31121@gmail.com" },
+    { letter: "A", icon: <FaEnvelope />, label: "Email", href: "https://mail.google.com/mail/u/0/?fs=1&to=manthansiroya31121@gmail.com&tf=cm" },
     { letter: "C", icon: <SiCodechef />, label: "Codechef", href: "https://www.codechef.com/users/manthan_siroya" },
     { letter: "T", icon: <SiLeetcode />, label: "LeetCode", href: "https://leetcode.com/u/Manthan_Siroya/" },
 ];
