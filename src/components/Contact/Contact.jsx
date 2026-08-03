@@ -37,7 +37,15 @@ const SocialFlipNode = ({
 }) => {
     const Wrapper = item.href ? "a" : "div";
     const wrapperProps = item.href
-        ? { href: item.href, target: "_blank", rel: "noopener noreferrer" }
+        ? { 
+            href: item.href, 
+            target: "_blank", 
+            rel: "noopener noreferrer",
+            onClick: (e) => {
+                e.preventDefault();
+                window.open(item.href, "_blank", "noopener,noreferrer");
+            }
+          }
         : { onClick: item.onClick };
 
     return (
